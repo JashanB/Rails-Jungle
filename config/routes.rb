@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-  root to: 'products#index'
+  # get '/' => 'products#index' is another way of writing root
+  root to: 'products#index' # defines home page (root) - products controller, index action
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
